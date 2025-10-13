@@ -78,6 +78,8 @@ void FollowBotManager::followBotLoop() {
     gyroscope.gyroscope_Loop();
     ros2_serial.ros2_loop();
     
+    //motion update never called
+    Motion::getInstance().update();
 }
 
 

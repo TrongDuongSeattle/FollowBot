@@ -6,6 +6,13 @@ void Motion::setVelocity(float linear, float angular) {
 
     m_targetLinear = linear;
     m_targetAngular = angular;
+
+     // Add these lines for debugging
+    Serial.print("Motion::setVelocity() - m_targetLinear): ");
+    Serial.print(m_targetLinear);
+    Serial.print(", m_targetAngular: ");
+    Serial.println(m_targetAngular);
+    update();
 }
 
 void Motion::update() {
@@ -14,6 +21,12 @@ void Motion::update() {
     // differential speeds
     float left = m_targetLinear - (m_targetAngular * WHEEL_BASE / 2);
     float right = m_targetLinear + (m_targetAngular * WHEEL_BASE / 2);
+
+    // Add these lines for debugging
+    Serial.print("Motion::update() - Left: ");
+    Serial.print(left);
+    Serial.print(", Right: ");
+    Serial.println(right);
 
     mMotors->setNormalizedSpeeds(left, right);
 }

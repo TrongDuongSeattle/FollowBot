@@ -38,7 +38,7 @@ void ROS2_Serial::ros2_loop() {
 
     if ((currentMillis - previousMillis) >= interval) {
         previousMillis = currentMillis;
-        // readSerialData();
+        readSerialData();
         writeSerialData();
     }
 }
@@ -46,14 +46,14 @@ void ROS2_Serial::ros2_loop() {
 void ROS2_Serial::readSerialData() {
     if(Serial.available() > 0) {
         String message = Serial.readStringUntil('\n');
-        Serial.print("Received: ");
+        Serial.print("ROS2_Serial::readSerialData() Received: ");
         Serial.println(message);
 
         doc.clear();
         DeserializationError error = deserializeJson(doc, message);
 
         if (error) {
-            Serial.print("JSON Error: ");
+            Serial.print("ROS2_Serial::readSerialData() JSON Error: ");
             Serial.println(error.c_str());
             return;
         }
@@ -62,6 +62,12 @@ void ROS2_Serial::readSerialData() {
         if (doc["sensor_type"] == "cmd_vel") {
             float linear = doc["data"]["linear"]["x"];
             float angular = doc["data"]["angular"]["z"];
+            Serial.print("ROS2_Serial::readSerialData() linear");
+            Serial.print(linear);
+            Serial.println();
+            Serial.print("ROS2_Serial::readSerialData() angular");
+            Serial.print(angular);
+
             Motion::getInstance().setVelocity(linear, angular);
         }
         // add other message types here as needed

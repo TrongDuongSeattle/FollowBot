@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/mlfhntr/.platformio/packages/framework-arduinorenesas-uno/cores/arduino",
+                "/home/mlfhntr/fbot_arduino_ws/FollowBot/FollowBot/.pio/libdeps/uno_r4_wifi/Adafruit Motor Shield V2 Library",
+                "/home/mlfhntr/.platformio/packages/framework-arduinorenesas-uno/variants/UNOWIFIR4/includes/ra/fsp/inc/api",
+                "/home/mlfhntr/.platformio/packages/framework-arduinorenesas-uno/variants/UNOWIFIR4/includes/ra/fsp/inc",
+                "/home/mlfhntr/.platformio/packages/framework-arduinorenesas-uno/variants/UNOWIFIR4/includes/ra_cfg/fsp_cfg/bsp",
+                "/home/mlfhntr/.platformio/packages/framework-arduinorenesas-uno/variants/UNOWIFIR4/includes/ra_gen",
+                "/home/mlfhntr/.platformio/packages/framework-arduinorenesas-uno/variants/UNOWIFIR4/includes/ra/arm/CMSIS_5/CMSIS/Core/Include",
+                "/home/mlfhntr/.platformio/packages/framework-arduinorenesas-uno/variants/UNOWIFIR4/**",
+                "/home/mlfhntr/.platformio/packages/framework-arduinorenesas-uno/libraries/Wire",
+                "/home/mlfhntr/fbot_arduino_ws/FollowBot/FollowBot/.pio/libdeps/uno_r4_wifi/ArduinoBLE/src",
+                "/home/mlfhntr/fbot_arduino_ws/FollowBot/FollowBot/.pio/libdeps/uno_r4_wifi/ArduinoJson/src",
+                "/home/mlfhntr/fbot_arduino_ws/FollowBot/FollowBot/.pio/libdeps/uno_r4_wifi/Adafruit MPU6050/**",
+                "/home/mlfhntr/fbot_arduino_ws/FollowBot/FollowBot/.pio/libdeps/uno_r4_wifi/Adafruit BusIO",
+                "/home/mlfhntr/.platformio/packages/framework-arduinorenesas-uno/libraries/SPI",
+                "/home/mlfhntr/fbot_arduino_ws/FollowBot/FollowBot/.pio/libdeps/uno_r4_wifi/Adafruit Unified Sensor",
+                "/home/mlfhntr/fbot_arduino_ws/FollowBot/FollowBot/include"
+            ],
+            "defines": [
+                "USBCON"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

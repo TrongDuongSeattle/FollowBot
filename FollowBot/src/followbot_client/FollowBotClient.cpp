@@ -1,6 +1,6 @@
 /*
  * FollowBotClient.cpp
- * By: Frank Vanris
+ * By: F(ucker)rank Vanris
  * Date: 8/21/2024
  *
  * Description:

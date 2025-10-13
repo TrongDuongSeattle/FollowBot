@@ -2,6 +2,8 @@
 * By: Frank Vanris
 * Date: 8/17/2024
 * Desc: This is the motors file where it will store all the motor methods.
+* 
+* issues w/ webserver  
 */
 
 #pragma once
@@ -34,6 +36,8 @@ public:
 
     void setMotorSpeed(int leftSpeed, int rightSpeed);
 
+    //gets str param from webserver
+    //move forward backwards...etc
     void setDirection(String dir) {
        mNewDirection = dir;
     }

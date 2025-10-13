@@ -94,6 +94,12 @@ int Motors::scaleSpeed(float normalized) {
 }
 
 void Motors::setNormalizedSpeeds(float left, float right) {
+    //debugging statements
+    Serial.print("Motors::setNormalizedSpeeds() - Left: ");
+    Serial.print(left);
+    Serial.print(", Right: ");
+    Serial.println(right);
+
     setLeftRightSpeeds(
         scaleSpeed(left),
         scaleSpeed(right)
